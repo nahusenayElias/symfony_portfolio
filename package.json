@@ -1,0 +1,23 @@
+{
+  "name": "symfony_portfolio_app",
+  "version": "1.0.0",
+  "description": "A personal portfolio website built with Symfony to showcase your web development skills, projects, and contact information.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "encore dev --watch",
+    "build": "encore production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@symfony/webpack-encore": "^5.1.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4"
+  }
+}
