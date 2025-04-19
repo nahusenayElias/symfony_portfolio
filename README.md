@@ -38,7 +38,7 @@ This will generate a new Symfony app with the webapp skeleton in your desired di
 ### 6. Contact Form
 - The Contact page (`/contact`) now features a working form (Name, Email, Message).
 - Submissions are validated and a confirmation message is shown on success.
-- (You can extend this to send emails or save messages to a database.)
+- (u can extend this to send emails or save messages to a database.)
 
 ---
 
@@ -54,11 +54,11 @@ To try it:
 
 ---
 
-## Next Steps
+## Possible Next Steps to enhance the project and deepen the understanding
 - Make the Projects page dynamic.
 - Add email sending or message storage for the contact form.
 - Improve styling with CSS or a framework.
-- Deploy your portfolio online.
+- Deploy my portfolio online.
 
 ---
 
@@ -67,7 +67,7 @@ To try it:
 To start the local development server:
 
 ```bash
-cd symfony_portfolio_app
+cd [symfony_app]
 symfony serve
 ```
 
