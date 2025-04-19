@@ -5,13 +5,30 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         {% block stylesheets %}
-        {% endblock %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}  {{ encore_entry_link_tags('app') }}
 
         {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body class="min-h-screen flex flex-col">
+        <nav class="bg-gray-900 text-white py-4 mb-6">
+            <div class="container mx-auto flex justify-center space-x-8">
+                <a href="{{ path('home') }}" class="hover:text-blue-400 font-semibold">Home</a>
+                <a href="{{ path('about') }}" class="hover:text-blue-400 font-semibold">About</a>
+                <a href="{{ path('projects') }}" class="hover:text-blue-400 font-semibold">Projects</a>
+                <a href="{{ path('contact') }}" class="hover:text-blue-400 font-semibold">Contact Me</a>
+            </div>
+        </nav>
+        <main class="flex-grow">
+            <div class="container mx-auto px-4 max-w-xl">
+                {% block body %}{% endblock %}
+            </div>
+        </main>
+        <footer class="bg-gray-900 text-gray-300 text-center py-4 mt-8">
+            &copy; {{ "now"|date("Y") }} Elias U. | Built with <a href="https://symfony.com" class="text-blue-400 hover:underline" target="_blank">Symfony</a> &amp; <a href="https://tailwindcss.com" class="text-blue-400 hover:underline" target="_blank">Tailwind CSS</a>
+        </footer>
     </body>
 </html>
