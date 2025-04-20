@@ -64,6 +64,8 @@ Encore
 
     // uncomment if you use React
     //.enableReactPreset()
+    .enablePostCssLoader()  // Critical for Tailwind processing[1][5][8]
+
 
     // uncomment to get integrity="..." attributes on your script & link tags
     // requires WebpackEncoreBundle 1.4 or higher
