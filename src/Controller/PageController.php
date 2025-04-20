@@ -30,10 +30,10 @@ final class PageController extends AbstractController
 
         $success = false;
         if ($form->isSubmitted() && $form->isValid()) {
-            // Here you could send an email or save the message
-            $success = true;
-            // Optionally: $this->addFlash('success', 'Thank you for your message!');
-        }
+    // ... handle the form (send mail, etc.)
+    $this->addFlash('success', 'Thank you for your message!');
+    return $this->redirectToRoute('contact');
+}
 
         return $this->render('page/contact.html.twig', [
             'contactForm' => $form->createView(),
