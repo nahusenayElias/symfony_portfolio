@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}BlogPost{% endblock %}
+
+{% block body %}
+    <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+        {% if blog_post.image %}
+            <img src="{{ blog_post.image }}" alt="{{ blog_post.title }}" class="w-full h-64 object-cover">
+        {% endif %}
+        <div class="p-8">
+            <h1 class="text-3xl font-bold mb-4 text-blue-900">{{ blog_post.title }}</h1>
+            <div class="flex items-center justify-between text-sm text-gray-500 mb-6">
+                <span>{{ blog_post.author }}</span>
+                <span>{{ blog_post.createdAt ? blog_post.createdAt|date('M d, Y') : '' }}</span>
+            </div>
+            <div class="prose max-w-none text-gray-800 mb-8">{{ blog_post.content|raw }}</div>
+            <div class="flex space-x-4">
+                <a href="{{ path('app_blog_post_index') }}" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded font-semibold">Back to List</a>
+                <a href="{{ path('app_blog_post_edit', {'id': blog_post.id}) }}" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded font-semibold">Edit</a>
+                {{ include('blog_post/_delete_form.html.twig') }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
