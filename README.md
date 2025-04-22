@@ -17,9 +17,6 @@ symfony new [projectName] --webapp
 This will generate a new Symfony app with the webapp skeleton in your desired directory.
 
 ### 2. Install Dependencies
-
-```bash
-npm install
 ```
 
 ### 3. Install Tailwind CSS
@@ -163,9 +160,26 @@ symfony serve
 
 Visit your site at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-![Portfolio Home Page](assets/Screenshot1.png)
+**Home page**
+
+The overall home page looks as depicted in the screenshot: 
+
+![Portfolio Home Page](assets/image04.png)
+
+**About page**
+
+The project about page:
 
 ![Portfolio About Page](assets/Screenshot2.png)
+
+**Contact page**
+
+The project also have a form submission feature the form submitted will be in the backend:
+
+![Portfolio Contact form Page](assets/image03.png)
+
+
+
 
 ---
 
